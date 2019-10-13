@@ -64,15 +64,40 @@
                                     <constraint firstItem="tbQ-Yh-qEt" firstAttribute="leading" secondItem="pIg-DT-ui1" secondAttribute="trailing" constant="20" id="q00-RR-CSK"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Lk-pi-mdN">
+                                <rect key="frame" x="20" y="353.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="increase:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gmz-N1-Te4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTX-XS-JYz">
+                                <rect key="frame" x="86" y="353.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="decrease:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Emu-KS-Q4c"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="3Lk-pi-mdN" firstAttribute="top" secondItem="WWJ-of-VGf" secondAttribute="bottom" constant="20" id="1n2-JD-FBO"/>
                             <constraint firstItem="WWJ-of-VGf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5DV-do-Voy"/>
+                            <constraint firstItem="bTX-XS-JYz" firstAttribute="leading" secondItem="3Lk-pi-mdN" secondAttribute="trailing" constant="20" id="IOW-wT-zx1"/>
                             <constraint firstItem="WWJ-of-VGf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="LWw-vi-5Yr"/>
+                            <constraint firstItem="bTX-XS-JYz" firstAttribute="top" secondItem="WWJ-of-VGf" secondAttribute="bottom" constant="20" id="XJm-kX-sx7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WWJ-of-VGf" secondAttribute="trailing" constant="20" id="b3d-TG-6lf"/>
+                            <constraint firstItem="3Lk-pi-mdN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cfx-bO-G4B"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="graphHeight1" destination="Wd3-kY-EfR" id="5eT-db-pnw"/>
+                        <outlet property="graphHeight2" destination="pc9-Tp-IWx" id="hOg-sF-BlE"/>
+                        <outlet property="graphHeight3" destination="7dI-rx-l96" id="tXF-or-X0Z"/>
+                        <outlet property="graphHeight4" destination="Cns-ay-43z" id="lTQ-3a-EIg"/>
+                        <outlet property="graphHeight5" destination="EhK-bq-jhm" id="HcL-Rh-aB4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
