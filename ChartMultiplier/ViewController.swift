@@ -10,7 +10,30 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBAction func increase(_ sender: UIButton) {
+      
+        
+        UIView.animate(withDuration: 1) {
+            self.graphHeight1 = self.graphHeight1.changeMultiplier(value: 0.5)
+            self.graphHeight2 = self.graphHeight2.changeMultiplier(value: 0.6)
+            self.graphHeight3 = self.graphHeight3.changeMultiplier(value: 0.7)
+            self.graphHeight4 = self.graphHeight4.changeMultiplier(value: 0.8)
+            self.graphHeight5 = self.graphHeight5.changeMultiplier(value: 0.9)
+            self.view.layoutIfNeeded()
+        }
+    }
     
+    @IBAction func decrease(_ sender: UIButton) {
+        UIView.animate(withDuration: 1) {
+            self.graphHeight1 = self.graphHeight1.changeMultiplier(value: 0.9)
+            self.graphHeight2 = self.graphHeight2.changeMultiplier(value: 0.8)
+            self.graphHeight3 = self.graphHeight3.changeMultiplier(value: 0.7)
+            self.graphHeight4 = self.graphHeight4.changeMultiplier(value: 0.6)
+            self.graphHeight5 = self.graphHeight5.changeMultiplier(value: 0.5)
+            self.view.layoutIfNeeded()
+        }
+      
+    }
     
     @IBOutlet weak var graphHeight1: NSLayoutConstraint!
     @IBOutlet weak var graphHeight2: NSLayoutConstraint!
@@ -22,13 +45,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        graphHeight1 = graphHeight1.changeMultiplier(value: 0.9)
-        graphHeight2 = graphHeight2.changeMultiplier(value: 0.8)
-        graphHeight3 = graphHeight3.changeMultiplier(value: 0.7)
-        graphHeight4 = graphHeight4.changeMultiplier(value: 0.6)
-        graphHeight5 = graphHeight5.changeMultiplier(value: 0.5)
-        
         
     }
 
